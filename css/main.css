@@ -1,0 +1,355 @@
+/*================TYPOGRAPHIE================*/
+body{
+    font-family: 'Open Sans' sans-serif;   
+}
+
+.main-nav, p{
+    font-size: 15px;
+}
+
+.sub-title{
+    font-size: 18px;
+}
+
+.about h3{
+    font-size: 24px;
+}
+
+.section__title{
+    font-size: 36px;
+}
+
+.count, .services__fa{
+    font-size: 56px;
+}
+
+.about h3, .main-nav, .section__title, .skill__name, .number-counter__text, .team-member__name{
+    text-transform: uppercase;
+}
+
+.about h3, .main-nav, .skill__name, .count, .team-member__name{
+    font-weight: bold;
+}
+
+/*================COULEUR===============*/
+a, .team-member__name, .team-member__job{
+    color: #323232;
+}
+
+p, .number-counter__text{
+    color: #686868;
+}
+
+.partner{
+    background-color: #fe7e17;
+}
+
+.contact__link, .tweet__link{
+    color: #fe7e17;
+}
+
+.fa{
+    color: #868686;
+}
+
+.services__fa{
+    color: #323232;
+}
+
+.contact__fa{
+    background-color: #ffffff;
+    color: #323232;
+}
+
+/*================INTERACTION================*/
+
+.main-menu__link:hover{
+    border-bottom: 1px solid #686868;
+    padding-bottom: 2px;
+}
+
+.sub-menu__link:hover{
+    color: #fe7e17;
+}
+
+.fa:hover{
+    color: #fe7e17;
+}
+
+.contact__link:hover, .tweet__link:hover, .services__fa:hover{
+    color: #ffffff;
+}
+
+.services__item:hover{
+    background-color: #fe7e17;
+    color: #ffffff;
+}
+
+.member__img:hover, .portfolio__img:hover{
+    filter:grayscale(0%);
+    transform: scale(1.02);
+}
+
+/*================SECTION TITLE STYLE================*/
+.section__title{
+    margin: 0 auto;
+    text-align: center;
+}
+
+.section__title::after{
+    border-bottom: 1px solid #fe7e17;
+    display:block;
+    content: "";
+    height: 0.063rem;
+    width: 7.5rem;
+    margin: 0.938rem auto 1.25rem;
+    position: relative;
+}
+
+/*================FLEXBOX================*/
+
+.main-nav, .main-menu{
+    display: flex;
+    justify-content: space-around;
+}
+
+.about__item1, .about__item2, .member, .panel__services, .panel__twitter{
+    display: flex;
+}
+
+.facts__numbers{
+    display: flex;
+    justify-content: space-around;
+}
+
+.partner{
+    display: flex;
+    justify-content: center;
+}
+
+    .about__text{
+        flex: 2;
+    }
+
+    .skills {
+        flex: 1;
+    }
+
+/*================GRID================*/
+.gutter{
+    width: 100%;
+}
+
+.container > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+}
+
+.container > div >img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container{
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(250px,2fr));
+    grid-auto-rows: 250px;
+    grid-auto-flow: dense;
+}
+
+.horizontal{
+    grid-column: span 2;
+}
+
+.vertical{
+    grid-row: span 2;
+}
+
+.big{
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+@media screen and (min-width: 1024px){
+    .wrapper{
+        width: 960px;
+        margin: 0 auto;
+    }
+}
+
+/*================ABOUT================*/
+.about, .our_team, .from-the-blog, .facts{
+    padding-bottom: 6.25rem;
+    padding-top: 6.25rem;
+    margin: 0 10rem;
+}
+
+.separator{
+    border-top: 1px solid #ebebeb;
+    height: 1px;
+    width: 100%;
+    top:1px;  
+}
+
+.about__title, .separator, .about__item1, .about__item2{
+    margin-bottom: 20px;
+}
+
+/*================SKILL BAR================*/
+
+.skill{
+    width: 100%;
+    max-width: 37.5rem;
+    padding: 0 1.25rem;
+}
+
+.skill__name{
+    margin: 0.45rem 0;
+}
+
+.skill__bar{
+    height: 1rem;
+    background: #fff;
+    border-radius: 8px; 
+}
+
+.skill__per--html, .skill__per--illustrator,
+.skill__per--photoshop{
+    height: 1rem;
+    background-color: #fe7e17;
+    position: relative;
+
+}
+
+.skill__per--html{
+    width: 65%;
+    animation: skill__per--html 2s;
+}
+
+.skill__per--illustrator{
+    width: 45%;
+    animation: skill__per--illustrator 2s;
+}
+
+.skill__per--photoshop{
+    width: 95%;
+    animation: skill__per--photoshop 2s;
+}
+
+
+.skill__per--html::before{
+    content: "65";
+    position: absolute;
+    padding: 0.25rem 0.375rem;
+    background-color:#000;
+    color: #fff;
+    font-size: 0.75rem;
+    border-radius: 0.25rem;
+    top: -1.875rem;
+    right: 0;
+    transform: translate(50%)
+}
+
+.skill__per--illustrator::before{
+    content: "45";
+    position: absolute;
+    padding: 0.25rem 0.375rem;
+    background-color:#000;
+    color: #fff;
+    font-size: 0.75rem;
+    border-radius: 0.25rem;
+    top: -1.875rem;
+    right: 0;
+    transform: translate(50%)
+}
+
+.skill__per--photoshop::before{
+    content: "95";
+    position: absolute;
+    padding: 0.25rem 0.375rem;
+    background-color:#000;
+    color: #fff;
+    font-size: 0.75rem;
+    border-radius: 0.25rem;
+    top: -1.875rem;
+    right: 0;
+    transform: translate(50%)
+}
+
+.skill__per--html::after, .skill__per--illustrator::after,
+.skill__per--photoshop::after{
+    content: "";
+    position: absolute;
+    width: 0.625rem; 
+    height: 0.625rem;
+    background-color: #000;
+    top: -1rem;
+    right: 0;
+    transform: translateX(50%) rotate(45deg);
+    border-radius: 0.125rem;
+
+}
+
+
+@keyframes skill__per--illustrator{
+    0%{
+        width: 0%
+    }
+    100%{
+        width: 45%
+    }
+}
+@keyframes skill__per--html{
+    0%{
+        width: 0%
+    }
+    100%{
+        width: 65%
+    }
+}
+@keyframes skill__per--photoshop{
+    0%{
+        width: 0%
+    }
+    100%{
+        width: 95%
+    }
+}
+
+
+/*================OUR TEAM STYLES================*/
+.sub-title{
+    text-align: center;
+}
+
+.team-member{
+    margin: 0 auto;
+    text-align: center;
+}
+
+.member__img, .team-member__name, .team-member__job, 
+.team-member__social{
+    margin: 0 auto;
+}
+
+.team-member__description{
+    text-align: center;
+}
+
+.member__img, .portfolio__img{
+    filter:grayscale(100%);
+}
+
+/*================FACTS STYLES================*/
+.count{
+    text-align: center;
+}
+
+/*================TWITTER FEEDS STYLES================*/
+.panel__twitter{
+    text-align: center;
+}
